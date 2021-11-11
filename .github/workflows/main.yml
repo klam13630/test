@@ -40,7 +40,7 @@ jobs:
         with:
          source_dir: ./src
          recurse: true
-         output_dir: ./out
+         output_dir: ./JSDocumentation
          
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.0.0

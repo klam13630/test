@@ -35,8 +35,8 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           
-      - name: Build 2
-        uses: andstor/jsdoc-action@v1
+      - name: JSDoc Action
+        uses: andstor/jsdoc-action@v1.2.0
         with:
          source_dir: ./src
          recurse: true

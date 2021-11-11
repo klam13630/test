@@ -35,6 +35,9 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           
-      - name: doc
-        run: npm install -g jsdoc
-            jsdoc app.js
+      - name: Build 2
+        uses: andstor/jsdoc-action@v1
+        with:
+         source_dir: ./src
+         recurse: true
+         output_dir: ./out

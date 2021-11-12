@@ -2,7 +2,9 @@
 
 window.addEventListener('DOMContentLoaded', init);
 
-
+/**
+* This is a comment, you should be intimidated by this thorough documentation
+*/
 function init() {
   var synth = window.speechSynthesis;
   var options = document.getElementById("voice-select");

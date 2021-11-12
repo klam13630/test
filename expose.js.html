@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: expose2.js</title>
+    <title>JSDoc: Source: expose.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: expose2.js</h1>
+    <h1 class="page-title">Source: expose.js</h1>
 
     
 
@@ -26,72 +26,13 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>
-/**
- * App Module
- * @module /app.js
- *
- * @author Steve Griffith &lt;steve@home.org>
- * @version 0.1.2
- * @description The init method is exported and once called will add the click event
- * listener to start the api fetch and then build the display of the products
- *
- * See [Getting Started]{@tutorial overview} to learn how to use app.js.
- */
-
-/**
- * @constant {string} baseURL base portion of API url
- */
-const baseURL = 'https://cool.dev/api';
-/**
- * @enum {Array.&lt;string>} list of possible colour values to be used
- */
-const COLORS = ['rebeccapurple', 'cornflowerblue', 'lightsalmon'];
-
-/**
- * @constant {string} API_KEY key required for api param in querystring
- */
-const API_KEY = 'abcd-0123';
-
-/**
- * @type {HTMLElement}
- * @global
- */
-let root;
-
-/**
- * @typedef {{id: number, name: string, price: number}} product object to be used as a blueprint to extract product details
- */
-
-/**
- * getData function will attempt to make an API call to the provided endpoint.
- * If it works, the JSON string will be turned into an object and passed to the
- * buildData function. A failure will be written to console.error
- *
- * @param {string} endpoint api endpoint to be added to the base url for the api call
- * @example getData('products')
- */
-function getData(endpoint) {
-  let url = buildURL(endpoint);
-  fetch(url)
-    .then((resp) => {
-      if (!resp.ok) throw new Error(resp.statusText);
-      return resp.json();
-    })
-    .then((data) => {
-      buildHTML(data, COLORS[0]);
-    })
-    .catch(console.error);
-}
-
-// explore.js
+            <pre class="prettyprint source linenums"><code>// explore.js
 
 window.addEventListener('DOMContentLoaded', init);
 
 /**
- * don't touch 
- *
- */
+* This is a comment, you should be intimidated by this thorough documentation
+*/
 function init() {
   var synth = window.speechSynthesis;
   var options = document.getElementById("voice-select");
@@ -132,7 +73,6 @@ function init() {
 
   }, 100);
 }
-
 </code></pre>
         </article>
     </section>

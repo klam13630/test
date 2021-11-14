@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@main
         
       - name: Set working dir
-        runs: codacy-analysis-cli validate-configuration --directory `./src`
+        run: codacy-analysis-cli validate-configuration --directory `./src`
 
       - name: Run Codacy Analysis CLI
         uses: codacy/codacy-analysis-cli-action@master

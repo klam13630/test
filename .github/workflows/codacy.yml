@@ -17,9 +17,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@main
-        
-      - name: Set working dir
-        run: codacy-analysis-cli validate-configuration --directory `./src`
 
       - name: Run Codacy Analysis CLI
         uses: codacy/codacy-analysis-cli-action@master
@@ -31,6 +28,7 @@ jobs:
           # Force 0 exit code to allow SARIF file generation
           # This will handover control about PR rejection to the GitHub side
           max-allowed-issues: 2147483647
+          directory: klam13630/test/src
       
       # Upload the SARIF file generated in the previous step
       - name: Upload SARIF results file

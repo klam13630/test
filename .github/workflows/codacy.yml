@@ -19,8 +19,9 @@ jobs:
         uses: actions/checkout@main
 
       - name: Run Codacy Analysis CLI
-        uses: codacy/codacy-analysis-cli-action@master --directory ./src
+        uses: codacy/codacy-analysis-cli-action@master
         with:
+          directory: src
           output: results.sarif
           format: sarif
           # Adjust severity of non-security issues

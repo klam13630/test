@@ -2,9 +2,9 @@ name: Codacy Security Scan
 
 on:
   push:
-    branches: [ "edward", "everett", "george", "kevin", "lorenzo", "lynn" ]
+    branches: [ "edward", "everett", "george", "kevin", "lorenzo", "lynn", "main"]
   pull_request:
-    branches: [ "edward", "everett", "george", "kevin", "lorenzo", "lynn" ]
+    branches: [ "edward", "everett", "george", "kevin", "lorenzo", "lynn", "main"]
 
 defaults:
   run: 

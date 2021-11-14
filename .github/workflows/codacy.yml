@@ -8,7 +8,7 @@ on:
 
 defaults:
   run: 
-     working-directory: source 
+     working-directory: src 
 
 jobs:
   codacy-security-scan:
@@ -21,7 +21,6 @@ jobs:
       - name: Run Codacy Analysis CLI
         uses: codacy/codacy-analysis-cli-action@master
         with:
-          directory: test/src
           output: results.sarif
           format: sarif
           # Adjust severity of non-security issues

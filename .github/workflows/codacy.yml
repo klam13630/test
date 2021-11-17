@@ -28,7 +28,7 @@ jobs:
           # Force 0 exit code to allow SARIF file generation
           # This will handover control about PR rejection to the GitHub side
           max-allowed-issues: 2147483647
-          directory: klam13630/test/src
+          directory: src/
       
       # Upload the SARIF file generated in the previous step
       - name: Upload SARIF results file
